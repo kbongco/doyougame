@@ -1,0 +1,21 @@
+.container{
+  width:350px;
+  height:450px;
+  border:solid 1px black;
+  position:relative;
+}
+
+.think{
+  text-align:center;
+}
+
+.button-container{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.go{
+  font-size:20px;
+  padding:14px 40px;
+}
