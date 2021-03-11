@@ -1,21 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import "./Welcome.css";
+import axios from "axios";
+import Questions from "../../Components/Questions/Questions";
 
 export default function Welcome() {
   const [start, setStart] = useState(false);
   const [highScores, setHighScores] = useState(false);
   const [back, setBack] = useState(false);
+  const [questions, setQuestions] = useState([]);
+
+  useEffect(() => {
+    const questionAPIURL = "https://opentdb.com/api.php?amount=10&category=15";
+    const apiCall = async () => {
+      const response = await axios(questionAPIURL);
+      setQuestions(response.data);
+      console.log(response.data.results[0].question);
+    };
+    apiCall();
+  }, []);
 
   if (start !== false) {
-    return <h1>Oh no</h1>;
+    return <Questions questions={questions}/>;
   }
 
   if (highScores !== false) {
     return (
       <>
         <h1>High Scores, you're not worthy</h1>
-        <p>Think you can get on this scoreboard? Click on the button and start the game :)</p>
-        <button id='start-here' onClick={(e) => setStart(!start)}>
+        <p>
+          Think you can get on this scoreboard? Click on the button and start
+          the game :)
+        </p>
+        <button id="start-here" onClick={(e) => setStart(!start)}>
           Ready steady GO!
         </button>
       </>
