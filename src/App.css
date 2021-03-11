@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 * {
   background: rgb(2, 0, 36);
   background: linear-gradient(
@@ -8,7 +8,7 @@
     rgba(12, 129, 153, 1) 100%
   );
   color:white;
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Press Start 2P', cursive;
 }
 
   .header{
