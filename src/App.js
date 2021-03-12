@@ -2,6 +2,7 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Welcome from './Screens/WelcomeScreen/Welcome'
+import GameOver from './Screens/GameOver/GameOver'
 
 function App() {
 
