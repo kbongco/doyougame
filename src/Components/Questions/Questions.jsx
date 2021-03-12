@@ -1,25 +1,27 @@
 import React, { useState } from "react";
-import HealthBar from 'HealthBar'
+import HealthBar from "HealthBar";
 
 export default function Questions(props) {
   const { questions } = props;
-  console.log(questions.results[0].question)
-  console.log(props);
-  const [currentQuestion, setCurrentQuestion] = useState(0)
+  console.log(questions.results[0].question);
+
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [currentHP, setCurrentHP] = useState(100);
+  const [wrongAnswerCount, setWrongAnswerCount] = useState(0);
 
   const healthPoints = [
-    { bgcolor: green, completed: 100 },
-    { bgcolor: yellow, completed: 66.3 },
-    { bgcolor: red, completed: 33.0}
-  ]
+    { bgcolor: green, healthRemaining: 100 },
+    { bgcolor: yellow, healthRemaining: 66.3 },
+    { bgcolor: red, healthRemaining: 33.3 },
+  ];
 
   return (
     <>
       <div className="question-container">
-        <div className='health-container'>
-          <HealthBar healthPoints={healthPoints}/>
+        <div className="health-container">
+          <HealthBar healthPoints={healthPoints} />
         </div>
-        <div className='question'>
+        <div className="question">
           <p>{questions.results[currentQuestion].question}</p>
         </div>
       </div>
