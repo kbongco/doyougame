@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./GameOver.css";
-import Welcome from "./Welcome/Welcome/jsx";
+import Welcome from '../WelcomeScreen/Welcome'
 import Questions from "../../Components/Questions/Questions";
 
 export default function GameOver() {

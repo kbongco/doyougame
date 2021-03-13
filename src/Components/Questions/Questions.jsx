@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import HealthBar from "HealthBar";
+import HealthBar from '../HealthBar/HealthBar'
 
 export default function Questions(props) {
   const { questions } = props;
@@ -8,11 +8,12 @@ export default function Questions(props) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentHP, setCurrentHP] = useState(100);
   const [wrongAnswerCount, setWrongAnswerCount] = useState(0);
+  const [correctAnswer, setCorrectAnswer] = useState(false)
 
   const healthPoints = [
-    { bgcolor: green, healthRemaining: 100 },
-    { bgcolor: yellow, healthRemaining: 66.3 },
-    { bgcolor: red, healthRemaining: 33.3 },
+    { bgcolor: 'green', healthRemaining: 100 },
+    { bgcolor: 'yellow', healthRemaining: 66.3 },
+    { bgcolor: 'red', healthRemaining: 33.3 },
   ];
 
   return (
