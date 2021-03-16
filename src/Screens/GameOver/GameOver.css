@@ -3,7 +3,7 @@
   background-color:black;
 }
 
-h1, .continue, button{
+.continue,  .game, .yes, .no{
   color:red;
   text-align:center;
   font-family: 'New Rocker', cursive;

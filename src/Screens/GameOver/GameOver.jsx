@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import "./GameOver.css";
-import Welcome from "./Welcome/Welcome/jsx";
+// import Welcome from "./WelcomeScreen/Welcome/jsx";
 import Questions from "../../Components/Questions/Questions";
 
 export default function GameOver() {
   const [startOver, setStartOver] = useState(false);
   const [returnMenu, setReturnMenu] = useState(false);
 
-  if (returnMenu !== false) {
-    return <Welcome />;
-  }
+  // if (returnMenu !== false) {
+  //   return <Welcome />;
+  // }
 
   if (startOver !== false) {
     return <Questions />;
