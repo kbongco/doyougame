@@ -4,8 +4,7 @@ import GameOver from "../../Screens/GameOver/GameOver";
 export default function Questions(props) {
   const { questions } = props;
   console.log(questions.results.length);
-  console.log(questions.results[0].question);
-  console.log(questions.results[0].incorrect_answers);
+  
   console.log(props);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentScore, setCurrentScore] = useState(0);
@@ -18,10 +17,9 @@ export default function Questions(props) {
   let correctAnswer = new Array(
     questions.results[currentQuestion].correct_answer
   );
+
   let inCorrectAnswers = questions.results[currentQuestion].incorrect_answers;
   let allAnswers = correctAnswer.concat(inCorrectAnswers).sort();
-  console.log(allAnswers);
-  console.log(allAnswers.length)
 
   return (
     <>
